@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Irfa - Your Learning Buddy</title>
+    
+    <!-- Bootstrap Dark Theme -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    <div class="container-fluid py-3">
+        <!-- Header -->
+        <header class="text-center mb-4">
+            <h1 class="display-4">Chat with Irfa 🤖</h1>
+            <p class="lead">Your friendly learning buddy yang selalu sabi buat bantuin!</p>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container bg-dark">
+            <!-- Messages will be added here dynamically -->
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Chat Form -->
+        <form id="chat-form" class="chat-form">
+            <div class="input-group">
+                <input type="text" 
+                       id="message-input" 
+                       class="form-control" 
+                       placeholder="Tulis pesan kamu di sini bestie..."
+                       autocomplete="off"
+                       required>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
 
