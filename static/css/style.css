@@ -1,1 +1,67 @@
 
+/* Custom styles to complement Bootstrap */
+.chat-container {
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.user-message {
+    background-color: var(--bs-primary);
+    color: white;
+    border-radius: 15px 15px 0 15px;
+    padding: 10px 15px;
+    max-width: 80%;
+    margin-left: auto;
+}
+
+.bot-message {
+    background-color: var(--bs-secondary);
+    color: white;
+    border-radius: 15px 15px 15px 0;
+    padding: 10px 15px;
+    max-width: 80%;
+}
+
+.typing-indicator {
+    display: none;
+    padding: 10px;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: bounce 0.5s infinite;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.chat-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: var(--bs-dark);
+}
